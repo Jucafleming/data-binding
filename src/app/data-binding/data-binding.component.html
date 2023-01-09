@@ -1,0 +1,15 @@
+<section>
+    <article>
+        <h3>Titulo</h3>
+        <p> string renderizada com interpolacao: {{ url }}</p>
+        <p>Resultado de 1 + 1 = {{1 + 1}}</p>
+        <p>Resultado de 1 + 1 != {{1 + 1 + getValor()}}</p>
+        <p>curso angular: {{ cursoAngular && getCurtir() }}</p>
+    </article>
+
+    <article>
+        <img src="{{ urlImagen }}">
+        <img [src]=" urlImagen ">
+
+    </article>
+</section>
