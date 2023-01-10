@@ -14,7 +14,7 @@
 
     <article>
         <div>
-            Selecione uma classeÇ
+            Selecione uma classe
             <select #classe (change)="0">
                 <option value="alert-success">Sucesso</option>
                 <option value="alert-info">Info</option>
@@ -49,7 +49,7 @@
         </div>
         <div class="alert {{ classe.value }}">Texto colorido conforme o box</div>
     </article>
-</section> -->
+</section>
 
 <section class="event-binding">
     <article>
@@ -73,4 +73,41 @@
             >passe o mouse sobre mim</span>
         </div>
     </article>
-</section>
+</section> -->
+    <!-- <section class = "two-way-binding">
+        <article>
+            <h3>two-way-binding</h3>
+            <div>
+                <input type="text" 
+                [value] = "nome"
+                (input) = "nome = campoInput.value"
+                #campoInput>
+                <input type="text" 
+                [ngModel] = "nome"
+                (ngModelChange) = "nome = $event"
+                #campoInput>
+
+                <input type="text" [(ngModel)]="nome">
+                <p>Voce digitou: {{ nome }}</p>
+            </div>
+
+            <br>
+            <br>
+            <div>
+                <input type="text" [(ngModel)] = "pessoa.nome" >
+                <input type="text" [(ngModel)] = "pessoa.idade" >
+                <p>Voce digitou: {{ pessoa.nome }}</p>
+                <p>Voce digitou: {{ pessoa.idade }}</p>
+            </div>
+        </article>
+    </section> -->
+
+    <!-- <section>
+        <article>
+            <h3>Input/Output Proprieties</h3>
+            <app-curso [nome] = "nomeDoCurso"></app-curso>
+        </article>
+    </section> -->
+
+    <contador [valor] ="10"
+    (mudouValor) = "onMudouValor($event)"></contador>

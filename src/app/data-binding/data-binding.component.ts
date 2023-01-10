@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -15,6 +16,15 @@ export class DataBindingComponent {
   valorAtual:string = ''
   valorSalvo: string = ''
   isMouseOver: Boolean = false
+  nome:string = 'abc'
+
+  pessoa: any={
+    nome: 'def',
+    idade:  20,
+
+  }
+
+  nomeDoCurso: string = 'angular'
   
   getValor(){
     return 5;
@@ -35,5 +45,8 @@ export class DataBindingComponent {
   }
   onMouseOverOut(){
     this.isMouseOver = !this.isMouseOver
+  }
+  onMudouValor(evento: any){
+    console.log(evento.novoValor)
   }
 }
